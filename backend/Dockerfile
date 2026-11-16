@@ -17,8 +17,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy backend app and trained ML models (excluding raw dataset to keep image lean)
-COPY app/ ./app/
-COPY models/ ./models/
+COPY backend/app/ ./app/
+COPY backend/models/ ./models/
 
 # Expose FastAPI default port
 EXPOSE 8000
