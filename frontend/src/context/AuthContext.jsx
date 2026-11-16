@@ -95,7 +95,7 @@ export const AuthProvider = ({ children }) => {
     setIsLoading(true);
     try {
       const response = await api.post('/api/v1/auth/signup', {
-        name,
+        full_name: name,
         email,
         password,
       });
